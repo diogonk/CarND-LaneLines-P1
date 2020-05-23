@@ -32,7 +32,9 @@ My pipeline consisted of 5 steps:
 5) Hough Transform
 
 In order to draw a single line on the left and right lanes, I modified the hough_lines() function by adding slope_intercept(). A line has the equation y = mx + b, and if we have two points (x, y), it is possible to calculate the parameters m and b.
+
 m = (y2 - y1) / (x2 - x1)
+
 b = y1 - m * x1
 
 When m is negative, the line is a left lane, otherwise is a right lane. Each line found has the parameters stored in a list. I calculate list average to find the lane equation. Then 2 points are calculate using the parameters to draw the line. 
